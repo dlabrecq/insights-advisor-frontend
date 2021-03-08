@@ -14,4 +14,9 @@ routes[`/beta/apps/inventory`] = { host: `http://${frontendHost}:8003` };
 routes[`/beta/${SECTION}/inventory`] = { host: `http://${frontendHost}:8003`  };
 routes[`/${SECTION}/inventory`] = { host: `http://${frontendHost}:8003`  };
 
+routes[`/apps/cost-management`] = { host: `http://${frontendHost}:8004` };
+routes[`/beta/apps/cost-management`] = { host: `http://${frontendHost}:8004` };
+routes[`/cost-management`] = { host: `http://${frontendHost}:8004` };
+routes[`/beta/cost-management`] = { host: `http://${frontendHost}:8004` };
+
 module.exports = { routes };
