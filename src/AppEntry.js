@@ -22,12 +22,6 @@ const Widget = ({ useLogger }) => {
                 <Router basename={getBaseName(window.location.pathname)}>
                     <React.Fragment>
                         <AsyncComponent appName="inventory" module="./SampleSharedComponent" someProp="I am a prop send from advisor" />
-                        <AsyncComponent
-                            scope="costManagement"
-                            appName="cost-management"
-                            module="./OcpOverviewWidget"
-                            title="Custom title prop"
-                        />
                         <NotificationsPortal />
                         <App />
                     </React.Fragment>

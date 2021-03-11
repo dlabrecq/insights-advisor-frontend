@@ -1,5 +1,6 @@
 import './List.scss';
 
+import AsyncComponent from '@redhat-cloud-services/frontend-components/AsyncComponent';
 import { PERMS, RULES_FETCH_URL } from '../../AppConstants';
 import { PageHeader, PageHeaderTitle } from '@redhat-cloud-services/frontend-components/PageHeader';
 import React, { Suspense, lazy, useEffect, useState } from 'react';
@@ -60,7 +61,18 @@ const List = () => {
                 </Alert>
             }
         </PageHeader>
-        <Main><Suspense fallback={<Loading />}><RulesTable /></Suspense></Main>
+        <Main>
+            <Suspense fallback={<Loading />}>
+                <span>Hello</span>
+                <AsyncComponent
+                    scope="costManagement"
+                    appName="cost-management"
+                    module="./OcpOverviewWidget"
+                    title="Custom title prop"
+                />
+                <RulesTable />
+            </Suspense>
+        </Main>
     </React.Fragment>;
 
 };
